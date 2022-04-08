@@ -1,0 +1,56 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    padding: 0px;
+}
+header{
+    background-color: #1565c0;
+    color: white;
+}
+header a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    border: 0pt;
+    background-color:  transparent;
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover{
+    background-color: #003c8f;
+    color: white;
+}
+
+.TitleDiv{
+    background-color: #e0e0e0;
+    align-content: center;
+}
+.TitleDiv img{
+    margin-left: calc(50% - 192px / 2);
+    margin-top: 50px;
+}
+.TitleDiv h1{
+    font-size: 64pt;
+    color: #1565c0;
+    text-align: center;
+}
+.TitleDiv p{
+    text-align: center;
+    color:  black;
+}
+
+.AboutDiv{
+    background-color: white;
+    color: black;
+}
+.AboutDiv h2{
+    text-align: center;
+}
+.AboutDiv p{
+    padding-left: 20px;
+}
+
