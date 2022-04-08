@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.Pages.SettingsPage"
+             Title="Nastavení">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame Margin="20,20,20,0" CornerRadius="8">
+                    <StackLayout>
+                        <Label Text="Zvuky aplikace:" FontSize="Subtitle"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Ztišit aplikaci"/>
+                            <Switch IsToggled="{Binding SilentApp}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="20,20,20,0" CornerRadius="8">
+                    <StackLayout>
+                        <Label Text="Výchozí konfigurace:" FontSize="Subtitle"/>
+                        <Button Text="Obnovit výchozí konfiguraci" x:Name="renewButton" Clicked="renewButton_Clicked"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.MainPage"
+             Title="Cvičení">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ic_action_search.png" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem IconImageSource="ic_action_more_vert.png" Clicked="ToolbarItem_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Frame HasShadow="True" x:Name="introductionView" Margin="40">
+            <StackLayout>
+                <Button ImageSource="ic_action_clear.png" HorizontalOptions="End" BackgroundColor="Transparent" Clicked="Button_Clicked_3" WidthRequest="40"/>
+                <Label Text="Vítejte v aplikaci!" Margin="0,-40,0,0" FontSize="Title"/>
+                <CarouselView ItemsSource="{Binding carouselViews}" IndicatorView="indicatorView">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Image IsAnimationPlaying="True" Source="{Binding Image}"/>
+                                <Label Text="{Binding Text}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightGray"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+            </StackLayout>
+        </Frame>
+        <StackLayout Grid.Row="0" x:Name="ExercisesLayout">
+            <StackLayout x:Name="emptyLayout">
+                <Label Text="Aktualné nemáte žádná cvičení." HorizontalTextAlignment="Center" Margin="20,50,0,0"/>
+                <Button Text="Vytvořit jedno" TextColor="CornflowerBlue" BackgroundColor="Transparent" Clicked="Button_Clicked" FontSize="Caption"/>
+            </StackLayout>
+        </StackLayout>
+        <Frame Grid.Row="1">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button ImageSource="ic_action_settings.png" Clicked="ToolbarItem_Clicked_1"/>
+                <Button ImageSource="ic_action_add_circle_outline.png" Clicked="Button_Clicked_1"/>
+                <Button ImageSource="ic_action_edit.png" Clicked="Button_Clicked_2"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

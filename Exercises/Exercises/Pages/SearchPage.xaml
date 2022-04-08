@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.SearchPage"
+             Title="Hledat">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbarEdit" IconImageSource="ic_edit.png" Clicked="toolbarEdit_Clicked"/>
+        <ToolbarItem x:Name="toolbarDelete" IconImageSource="ic_delete_forever.png" Clicked="toolbarDelete_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <SearchBar Placeholder="Sem zadejte hledaný výraz..." Margin="20" x:Name="searchBar" SearchButtonPressed="searchBar_SearchButtonPressed" TextChanged="searchBar_TextChanged"/>
+                <StackLayout x:Name="PolozkyLayout">
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

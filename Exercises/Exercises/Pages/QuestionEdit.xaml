@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.Pages.QuestionEdit"
+             Title="Editor otázek">
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame Margin="20">
+                <StackLayout>
+                    <Label Text="Úprava otázky" FontSize="Title"/>
+                    <Label Text="Hlavička:"/>
+                    <Entry x:Name="headerEntry" Text="{Binding Header}" Placeholder="Sem zadejte hlavičku otázky."/>
+                    <Label Text="Popis:"/>
+                    <Editor x:Name="descriptionEntry" Text="{Binding Description}" Placeholder="Sem zadejte popis otázky."/>
+                    <Label Text="Typ otázky:"/>
+                    <Picker SelectedIndexChanged="Picker_SelectedIndexChanged" x:Name="picker">
+                        <Picker.Items>
+                            <x:String>Odpoved</x:String>
+                            <x:String>A, B, C</x:String>
+                            <x:String>Výběr obrázku</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Label Text="Správná odpoved:"/>
+                    <StackLayout x:Name="answerLayout"/>
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

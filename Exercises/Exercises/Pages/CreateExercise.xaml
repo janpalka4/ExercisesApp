@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.Pages.CreateExercise"
+             Title="Editor cvičení">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="ic_delete_forever.png" x:Name="deleteButton1" Clicked="deleteButton_Clicked_1"/>
+        <ToolbarItem IconImageSource="ic_clear.png" x:Name="exitButton" Clicked="exitButton_Clicked"/>
+        <ToolbarItem IconImageSource="ic_check.png" x:Name="checkButton" Clicked="checkButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Frame Margin="20">
+                <StackLayout Spacing="10">
+                    <Label FontSize="Title" Text="Vytvořit cvičení"/>
+                    <Label Text="Název:"/>
+                    <Entry x:Name="nameEntry" Placeholder="Sem zadejte jméno cvičení." Text="{Binding Name}"/>
+                    <Label Text="Popis:"/>
+                    <Editor x:Name="descriptionEntry" Placeholder="Sem zadejte popis." Text="{Binding Description}" HeightRequest="100"/>
+                    <Grid HeightRequest="32" HorizontalOptions="Fill">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Otázky:" Grid.Column="0"/>
+                        <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End">
+                            <Button ImageSource="ic_edit.png" BackgroundColor="Orange" x:Name="editButton" WidthRequest="40" Clicked="editButton_Clicked"/>
+                            <Button ImageSource="ic_add.png" BackgroundColor="YellowGreen" x:Name="addButton" WidthRequest="40" Clicked="addButton_Clicked"/>
+                            <Button ImageSource="ic_delete_forever.png" BackgroundColor="OrangeRed" x:Name="deleteButton" WidthRequest="40" Clicked="deleteButton_Clicked"/>
+                        </StackLayout>
+                    </Grid>
+                    <ListView x:Name="questionsListView">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Header}" TextColor="Black"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </StackLayout>
+            </Frame>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.Pages.ResultPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Red" x:Name="pageLayout" VerticalOptions="Center">
+            <Label Text="Špatně!" HorizontalOptions="Center" VerticalOptions="Center" x:Name="resultLabel" FontSize="Large" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

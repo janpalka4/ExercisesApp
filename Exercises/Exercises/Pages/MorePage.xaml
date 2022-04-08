@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Exercises.MorePage"
+             Title="Možnosti">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20,40, 20, 0">
+                <Button Text="Nové cvičení" BackgroundColor="Transparent" x:Name="addButton" Clicked="addButton_Clicked"/>
+                <Button Text="Správa cvičení" BackgroundColor="Transparent" x:Name="managmentButton" Clicked="managmentButton_Clicked"/>
+                <Button Text="Nastavení" BackgroundColor="Transparent" x:Name="settingsButton" Clicked="settingsButton_Clicked"/>
+                <Button Text="O aplikaci" BackgroundColor="Transparent" TextColor="CornflowerBlue" x:Name="aboutButton" Clicked="aboutButton_Clicked"/>
+            </StackLayout>
+            <Label x:Name="InfoLabel" Margin="20" HorizontalTextAlignment="Center">
+                <Label.Text>
+Verze aplikace: {0}
+Build: {1}
+                </Label.Text>
+            </Label>
+            <Label Text="{StaticResource Key=CopyrightNotice}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
