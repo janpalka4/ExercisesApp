@@ -22,6 +22,10 @@ header a:hover{
     color: white;
 }
 
+body a{
+    color: #5E95D2;
+}
+
 
 .TitleDiv{
     background-color: transparent;
